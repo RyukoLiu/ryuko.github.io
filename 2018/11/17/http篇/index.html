@@ -7,17 +7,17 @@
   
   <title>http篇 | Naiaky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  i.浏览器搜索自身的DNS缓存  ii.搜索操作系统的DNS缓存  iii.若上步缓存没有或已失效，则搜索本地host文件缓存      iv.发起一个DNS的系统调用 4.若均没有搜索到，则：">
+  <meta name="description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http篇">
 <meta property="og:url" content="http://yoursite.com/2018/11/17/http篇/index.html">
 <meta property="og:site_name" content="Naiaky">
-<meta property="og:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  i.浏览器搜索自身的DNS缓存  ii.搜索操作系统的DNS缓存  iii.若上步缓存没有或已失效，则搜索本地host文件缓存      iv.发起一个DNS的系统调用 4.若均没有搜索到，则：">
+<meta property="og:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-17T03:46:02.268Z">
+<meta property="og:updated_time" content="2018-11-17T04:38:23.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http篇">
-<meta name="twitter:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  i.浏览器搜索自身的DNS缓存  ii.搜索操作系统的DNS缓存  iii.若上步缓存没有或已失效，则搜索本地host文件缓存      iv.发起一个DNS的系统调用 4.若均没有搜索到，则：">
+<meta name="twitter:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
   
     <link rel="alternate" href="/atom.xml" title="Naiaky" type="application/atom+xml">
   
@@ -93,28 +93,24 @@
         <h5 id="http定义"><a href="#http定义" class="headerlink" title="http定义"></a>http定义</h5><p>http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯.</p>
 <h5 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h5><p>1.http客户的发起请求，创建新端口</p>
 <p>2.http服务器在端口监听客户请求</p>
-<p>3.http服务器向客户端返回状态和内容</p>
-<pre><code> i.浏览器搜索自身的DNS缓存
-
-ii.搜索操作系统的DNS缓存
-
-iii.若上步缓存没有或已失效，则搜索本地host文件缓存    
-
-iv.发起一个DNS的系统调用
-</code></pre><p>4.若均没有搜索到，则：</p>
-<pre><code>v.宽带运营商服务器查看本身缓存
-
-vi.宽带运营商发起一个迭代DNS解析请求，把结果返回操作系统同时缓存，操作系统内核把结果返回给浏                 览器，浏览器最终拿到域名
-</code></pre><p>5.TCP三次握手</p>
+<p>3.http服务器向客户端返回状态和内容 </p>
+<p>​    i.浏览器搜索自身的DNS缓存</p>
+<p>​    ii.搜索操作系统的DNS缓存</p>
+<p>​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存    </p>
+<p>​    iv.发起一个DNS的系统调用</p>
+<p>4.若均没有搜索到，则：</p>
+<p>​    v.宽带运营商服务器查看本身缓存</p>
+<p>​    vi.宽带运营商发起一个迭代DNS解析请求，把结果返回操作系统同时缓存，操作系统内核把结果返回给浏                 览器，浏览器最终拿到域名</p>
+<p>5.TCP三次握手</p>
 <p>6.TPC/IP链接建立以后，浏览器向服务器发送http请求</p>
 <p>7.服务器端接受请求，并根据路径参数，经过后端的一些处理后，把处理结果返回给   浏览器</p>
 <p>8.浏览器拿到HTML代码，在解析和渲染这个页面时，里面的IS、CSS、图片等静态资源，它们同样也是一个个http请求，都需要经过以上七个步骤</p>
 <p>9.浏览器根据资源对页面进行渲染，把完整的页面呈现给用户</p>
 <p>总体来说，流程分为请求和响应两部分，都需要发送http头和正文信息.</p>
-<pre><code>http头：一些附加信息，如内容类型、状态码、服务器发送响应日期等
-
-正文信息：用户所提交的表单数据
-</code></pre><h6 id="常用请求方法："><a href="#常用请求方法：" class="headerlink" title="常用请求方法："></a>常用请求方法：</h6><p>get： 获取数据</p>
+<p>​    http头：一些附加信息，如内容类型、状态码、服务器发送响应日期等</p>
+<p>​    正文信息：用户所提交的表单数据</p>
+<p>​    </p>
+<h6 id="常用请求方法："><a href="#常用请求方法：" class="headerlink" title="常用请求方法："></a>常用请求方法：</h6><p>get： 获取数据</p>
 <p>post：新创建一个资源，向指定资源提交数据</p>
 <p>put：更新，向指定资源上传一个最新内容</p>
 <p>delete：删除，请求服务器删除标识资源</p>
@@ -132,15 +128,10 @@ vi.宽带运营商发起一个迭代DNS解析请求，把结果返回操作系�
 <p>基于事件驱动的回调函数：即为了某个事件而注册回调函数</p>
 <p>事件循环：若有大量的异步请求的I/O操作完成的回调函数，完成一些密集的任务而不会阻塞，这种管理机制称为事件循环</p>
 <h6 id="http源码解读相关内容"><a href="#http源码解读相关内容" class="headerlink" title="http源码解读相关内容"></a>http源码解读相关内容</h6><p>作用域：局部/全局变量、函数的访问能力</p>
-<p>上下文：常常代表this变量的值及它的指向，决定一个方法怎么被调用</p>
-<pre><code>This变量通常指向当前函数的拥有者——执行上下文
-
-1.作为对象的方法，上下文为这个对象
-
-2.直接进行函数的调用，为全局变量
-
-3.构造函数，为新构建的实例对象
-</code></pre><h6 id="常用可以改变执行上下文的函数"><a href="#常用可以改变执行上下文的函数" class="headerlink" title="常用可以改变执行上下文的函数"></a>常用可以改变执行上下文的函数</h6><p>call  </p>
+<p>上下文：常常代表this变量的值及它的指向，决定一个方法怎么被调用          </p>
+<p>​        This变量通常指向当前函数的拥有者——执行上下文</p>
+<p>​            1.作为对象的方法，上下文为这个对象<br>​            2.直接进行函数的调用，为全局变量<br>​            3.构造函数，为新构建的实例对象</p>
+<h6 id="常用可以改变执行上下文的函数"><a href="#常用可以改变执行上下文的函数" class="headerlink" title="常用可以改变执行上下文的函数"></a>常用可以改变执行上下文的函数</h6><p>call  </p>
 <p>apply</p>
 <h6 id="解读例子："><a href="#解读例子：" class="headerlink" title="解读例子："></a>解读例子：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;); //引入http模块</span><br><span class="line"></span><br><span class="line">http.createServer(function(req,res)&#123; //创建一个服务器</span><br><span class="line">    res.writeHead(200,&#123;&quot;Content-type&quot;:&quot;text/blain&quot;&#125;); //将状态码和内容文本类型返回响应头</span><br><span class="line">    res.write(&quot;Hello NodeJs&quot;); //写入文本主体</span><br><span class="line">    res.end(); //结束响应</span><br><span class="line">&#125;).listen(1000); //监听1000这个端口</span><br></pre></td></tr></table></figure>
       

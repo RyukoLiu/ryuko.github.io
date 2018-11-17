@@ -1,96 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
-
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
   
-  <title>http篇 | Naiaky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
-<meta property="og:type" content="article">
-<meta property="og:title" content="http篇">
-<meta property="og:url" content="http://yoursite.com/2018/11/17/http篇/index.html">
-<meta property="og:site_name" content="Naiaky">
-<meta property="og:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-17T04:38:23.978Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="http篇">
-<meta name="twitter:description" content="http定义http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯. 流程1.http客户的发起请求，创建新端口 2.http服务器在端口监听客户请求 3.http服务器向客户端返回状态和内容  ​    i.浏览器搜索自身的DNS缓存 ​    ii.搜索操作系统的DNS缓存 ​    iii.若上步缓存没有或已失效，则搜索本地host文件缓存     ​    iv.发起一个DNS的">
+  <title>Naiaky</title>
   
-    <link rel="alternate" href="/atom.xml" title="Naiaky" type="application/atom+xml">
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
   
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
 </head>
-</html>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Naiaky</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">Hello world!</a>
-        </h2>
-      
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu"><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav">
+    <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Naiaky</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off">
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class="no-result">无搜索结果</p>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-http篇" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/11/17/http篇/" class="article-date">
-  <time datetime="2018-11-17T03:44:42.000Z" itemprop="datePublished">2018-11-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      http篇
-    </h1>
-  
+</div>
+    <!--Homepage-->
 
-      </header>
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a class="" target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">2</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="http定义"><a href="#http定义" class="headerlink" title="http定义"></a>http定义</h5><p>http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯.</p>
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-18.png)">
+  <h2>http篇</h2>
+    
+  <p>作者:Naiaky &nbsp&nbsp 发布于:<time datetime="2018-11-17T03:44:42.000Z">
+          2018-11-17
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h5 id="http定义"><a href="#http定义" class="headerlink" title="http定义"></a>http定义</h5><p>http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯.</p>
 <h5 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h5><p>1.http客户的发起请求，创建新端口</p>
 <p>2.http服务器在端口监听客户请求</p>
 <p>3.http服务器向客户端返回状态和内容 </p>
@@ -134,103 +173,75 @@
 <h6 id="常用可以改变执行上下文的函数"><a href="#常用可以改变执行上下文的函数" class="headerlink" title="常用可以改变执行上下文的函数"></a>常用可以改变执行上下文的函数</h6><p>call  </p>
 <p>apply</p>
 <h6 id="解读例子："><a href="#解读例子：" class="headerlink" title="解读例子："></a>解读例子：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;); //引入http模块</span><br><span class="line"></span><br><span class="line">http.createServer(function(req,res)&#123; //创建一个服务器</span><br><span class="line">    res.writeHead(200,&#123;&quot;Content-type&quot;:&quot;text/blain&quot;&#125;); //将状态码和内容文本类型返回响应头</span><br><span class="line">    res.write(&quot;Hello NodeJs&quot;); //写入文本主体</span><br><span class="line">    res.end(); //结束响应</span><br><span class="line">&#125;).listen(1000); //监听1000这个端口</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/17/http篇/" data-id="cjokygy0n0001eku59ab0wc0a" class="article-share-link">Share</a>
-      
-      
-    </footer>
   </div>
-  
+  <!--评论块-->
     
-<nav id="article-nav">
-  
-  
-    <a href="/2018/11/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
 
-  
 </article>
-
-</section>
-        
-          <aside id="sidebar">
-  
+<nav class="post-nav">
+  <!-- Prev Nav -->
     
 
-  
-    
 
-  
+  <!-- Next Nav -->
     
-  
+  <a href="/2018/11/09/hello-world/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/11/17/http篇/">http篇</a>
-          </li>
-        
-          <li>
-            <a href="/2018/11/09/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Naiaky<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
 </nav>
-    
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#http定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">http定义</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#流程"><span class="post-toc-number">2.</span> <span class="post-toc-text">流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#常用请求方法："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">常用请求方法：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#http事件回调相关一些名词作用"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">http事件回调相关一些名词作用</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#http源码解读相关内容"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">http源码解读相关内容</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#常用可以改变执行上下文的函数"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">常用可以改变执行上下文的函数</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#解读例子："><span class="post-toc-number">2.5.</span> <span class="post-toc-text">解读例子：</span></a></li></ol></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
+<p style="line-height: 45px">Copyright ©  2017  Naiaky</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
 
   </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
 </body>
 </html>

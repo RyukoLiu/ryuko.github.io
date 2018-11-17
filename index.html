@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Naiaky</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="�ŷ�">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Naiaky">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Naiaky">
+<meta property="og:description" content="�ŷ�">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Naiaky">
+<meta name="twitter:description" content="�ŷ�">
+  
+    <link rel="alternate" href="/atom.xml" title="Naiaky" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Naiaky</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Hello world!</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-http篇" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/17/http篇/" class="article-date">
+  <time datetime="2018-11-17T03:44:42.000Z" itemprop="datePublished">2018-11-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/17/http篇/">http篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="http定义"><a href="#http定义" class="headerlink" title="http定义"></a>http定义</h5><p>http是一种协议，智能终端要遵循这种规则才能实现相互之间的通讯.</p>
+<h5 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h5><p>1.http客户的发起请求，创建新端口</p>
+<p>2.http服务器在端口监听客户请求</p>
+<p>3.http服务器向客户端返回状态和内容</p>
+<pre><code> i.浏览器搜索自身的DNS缓存
+
+ii.搜索操作系统的DNS缓存
+
+iii.若上步缓存没有或已失效，则搜索本地host文件缓存    
+
+iv.发起一个DNS的系统调用
+</code></pre><p>4.若均没有搜索到，则：</p>
+<pre><code>v.宽带运营商服务器查看本身缓存
+
+vi.宽带运营商发起一个迭代DNS解析请求，把结果返回操作系统同时缓存，操作系统内核把结果返回给浏                 览器，浏览器最终拿到域名
+</code></pre><p>5.TCP三次握手</p>
+<p>6.TPC/IP链接建立以后，浏览器向服务器发送http请求</p>
+<p>7.服务器端接受请求，并根据路径参数，经过后端的一些处理后，把处理结果返回给   浏览器</p>
+<p>8.浏览器拿到HTML代码，在解析和渲染这个页面时，里面的IS、CSS、图片等静态资源，它们同样也是一个个http请求，都需要经过以上七个步骤</p>
+<p>9.浏览器根据资源对页面进行渲染，把完整的页面呈现给用户</p>
+<p>总体来说，流程分为请求和响应两部分，都需要发送http头和正文信息.</p>
+<pre><code>http头：一些附加信息，如内容类型、状态码、服务器发送响应日期等
+
+正文信息：用户所提交的表单数据
+</code></pre><h6 id="常用请求方法："><a href="#常用请求方法：" class="headerlink" title="常用请求方法："></a>常用请求方法：</h6><p>get： 获取数据</p>
+<p>post：新创建一个资源，向指定资源提交数据</p>
+<p>put：更新，向指定资源上传一个最新内容</p>
+<p>delete：删除，请求服务器删除标识资源</p>
+<p>head： 功能与get相同，区别为它不需要传回资源</p>
+<p>……</p>
+<h6 id="http事件回调相关一些名词作用"><a href="#http事件回调相关一些名词作用" class="headerlink" title="http事件回调相关一些名词作用"></a>http事件回调相关一些名词作用</h6><p>回调：在按顺序执行的异步编程中，将后续逻辑封装在回调函数中作为起始函数的参数，逐层去嵌套</p>
+<p>同步：执行一个任务，后序需要等它结束后再执行，执行顺序就是任务排列顺序</p>
+<p>异步：与同步相反，不需要等它结束就可以先执行</p>
+<p>阻塞：一直等待知道产生结果</p>
+<p>非阻塞：在等待过程中可以执行其他任务</p>
+<p>I/O：磁盘的写入和读出，即数据的进和出</p>
+<p>单线程：程序功能单次只能执行一个</p>
+<p>多线程：允许同时执行多个任务，但需要合理分配资源</p>
+<p>事件驱动：为了某个事件而注册回调函数，当事件发生时才执行，这种函数执行方式就称为事件驱动</p>
+<p>基于事件驱动的回调函数：即为了某个事件而注册回调函数</p>
+<p>事件循环：若有大量的异步请求的I/O操作完成的回调函数，完成一些密集的任务而不会阻塞，这种管理机制称为事件循环</p>
+<h6 id="http源码解读相关内容"><a href="#http源码解读相关内容" class="headerlink" title="http源码解读相关内容"></a>http源码解读相关内容</h6><p>作用域：局部/全局变量、函数的访问能力</p>
+<p>上下文：常常代表this变量的值及它的指向，决定一个方法怎么被调用</p>
+<pre><code>This变量通常指向当前函数的拥有者——执行上下文
+
+1.作为对象的方法，上下文为这个对象
+
+2.直接进行函数的调用，为全局变量
+
+3.构造函数，为新构建的实例对象
+</code></pre><h6 id="常用可以改变执行上下文的函数"><a href="#常用可以改变执行上下文的函数" class="headerlink" title="常用可以改变执行上下文的函数"></a>常用可以改变执行上下文的函数</h6><p>call  </p>
+<p>apply</p>
+<h6 id="解读例子："><a href="#解读例子：" class="headerlink" title="解读例子："></a>解读例子：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var http = require(&quot;http&quot;); //引入http模块</span><br><span class="line"></span><br><span class="line">http.createServer(function(req,res)&#123; //创建一个服务器</span><br><span class="line">    res.writeHead(200,&#123;&quot;Content-type&quot;:&quot;text/blain&quot;&#125;); //将状态码和内容文本类型返回响应头</span><br><span class="line">    res.write(&quot;Hello NodeJs&quot;); //写入文本主体</span><br><span class="line">    res.end(); //结束响应</span><br><span class="line">&#125;).listen(1000); //监听1000这个端口</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/17/http篇/" data-id="cjokx1n3o0001u4u5oy21lial" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/09/hello-world/" class="article-date">
+  <time datetime="2018-11-09T10:00:59.293Z" itemprop="datePublished">2018-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/09/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/09/hello-world/" data-id="cjokx1n3a0000u4u5c3cdiccp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/17/http篇/">http篇</a>
+          </li>
+        
+          <li>
+            <a href="/2018/11/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Naiaky<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

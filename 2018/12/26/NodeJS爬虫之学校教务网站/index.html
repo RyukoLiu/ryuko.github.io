@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="程序员">
+  <meta name="description" content="天涯望断，寻途千晚，恰揽一剪芳华">
+  
+  <title>Naiaky</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu"><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav">
+    <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Naiaky</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off">
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class="no-result">无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a class="" target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2018/12/">December 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">3</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-11.png)">
+  <h2>NodeJS爬虫之学校教务网站</h2>
+    
+  <p>作者:Naiaky &nbsp&nbsp 发布于:<time datetime="2018-12-26T11:44:17.000Z">
+          2018-12-26
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>​    </p>
+<h6 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h6><ol>
+<li><p>爬出的数据都是undefined</p>
+</li>
+<li><p>怎么获得登陆后的数据</p>
+</li>
+<li><p>如何解决爬出数据中文乱码的问题</p>
+<p><img src="/2018/12/26/NodeJS爬虫之学校教务网站/C:/Users\22910\blog\source\_posts\NodeJS爬虫之学校教务网站\QQ图片20181226205234.png" alt="QQ图片20181226205234"></p>
+</li>
+<li><p>如何导出到Excel表</p>
+</li>
+</ol>
+<h6 id="问题的解决："><a href="#问题的解决：" class="headerlink" title="问题的解决："></a>问题的解决：</h6><ol>
+<li>有两方面原因，i.未登录，ii.函数未用好，未找到所需要的那一个数据</li>
+<li>3.4 参考文末网址</li>
+</ol>
+<h6 id="最终代码如下："><a href="#最终代码如下：" class="headerlink" title="最终代码如下："></a>最终代码如下：</h6><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Excel = <span class="built_in">require</span>(<span class="string">'exceljs'</span>);<span class="comment">//用于导出数据到Excel表</span></span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"><span class="keyword">let</span> charset = <span class="built_in">require</span>(<span class="string">'superagent-charset'</span>);<span class="comment">//解决乱码问题</span></span><br><span class="line"><span class="keyword">var</span> superagent=<span class="built_in">require</span>(<span class="string">'superagent'</span>);<span class="comment">//发起请求</span></span><br><span class="line"><span class="keyword">var</span> url = <span class="string">'http://xk.csust.edu.cn/jxjh/Stu_byfakc_rpt.aspx'</span>;</span><br><span class="line">charset(superagent);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> cookies = fs.readFileSync(<span class="string">'./text.txt'</span>);<span class="comment">//同步读取该文件中所保存的cookie内容</span></span><br><span class="line"><span class="keyword">var</span> workbook = <span class="keyword">new</span> Excel.Workbook();<span class="comment">//创建workbook</span></span><br><span class="line"><span class="keyword">var</span> ws1 = workbook.addWorksheet(<span class="string">"理论课程"</span>);<span class="comment">//新建一名称为“理论课程”的sheet</span></span><br><span class="line">ws1.addRow([<span class="string">"序号"</span>,<span class="string">"学年学期"</span>,<span class="string">"课程"</span>,<span class="string">"学分"</span>,<span class="string">"课程类别"</span>]);<span class="comment">//第一行为栏目</span></span><br><span class="line"></span><br><span class="line">superagent</span><br><span class="line">    .get(url)</span><br><span class="line">    .set(<span class="string">"Cookie"</span>,cookies)</span><br><span class="line">    .charset(<span class="string">'gb2312'</span>)<span class="comment">//取决于网页的编码方式</span></span><br><span class="line">    .end(<span class="function"><span class="keyword">function</span> (<span class="params">error,res</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (error)</span><br><span class="line">            <span class="built_in">console</span>.log(error);</span><br><span class="line"></span><br><span class="line">    	<span class="comment">//通过load方法把HTML内容转换成一个jQuery对象</span></span><br><span class="line">        <span class="keyword">var</span> $ = cheerio.load(res.text);</span><br><span class="line">        <span class="keyword">var</span> rows = $(<span class="string">'.B,.H'</span>) <span class="comment">//通过类名拿到里面的每行</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> courseData = [];<span class="comment">//声明数据变量</span></span><br><span class="line">        rows.each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;<span class="comment">//遍历每一行</span></span><br><span class="line">            <span class="keyword">var</span> row = $(<span class="keyword">this</span>);<span class="comment">//拿到单独某一行</span></span><br><span class="line">            <span class="comment">//把文本内容拿出来</span></span><br><span class="line">            <span class="keyword">var</span> number = row.find(<span class="string">'td'</span>).eq(<span class="number">0</span>).text();</span><br><span class="line">            <span class="keyword">var</span> term = row.find(<span class="string">'td'</span>).eq(<span class="number">1</span>).text();</span><br><span class="line">            <span class="keyword">var</span> course = row.find(<span class="string">'td'</span>).eq(<span class="number">2</span>).text();</span><br><span class="line">            <span class="keyword">var</span> credit = row.find(<span class="string">'td'</span>).eq(<span class="number">3</span>).text();</span><br><span class="line">            <span class="keyword">var</span> courseType = row.find(<span class="string">'td'</span>).eq(<span class="number">4</span>).text();</span><br><span class="line">            <span class="keyword">var</span> chapterData = &#123;</span><br><span class="line">                number: number,</span><br><span class="line">                term: term,</span><br><span class="line">                course: course,</span><br><span class="line">                credit: credit,</span><br><span class="line">                courseType: courseType</span><br><span class="line">            &#125;</span><br><span class="line">            courseData.push(chapterData);<span class="comment">//把该行数据放入数组</span></span><br><span class="line">        &#125;)</span><br><span class="line">		<span class="comment">//将每一行导出</span></span><br><span class="line">        courseData.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> number = item.number;</span><br><span class="line">            <span class="keyword">var</span> term = item.term;</span><br><span class="line">            <span class="keyword">var</span> course = item.course;</span><br><span class="line">            <span class="keyword">var</span> credit = item.credit;</span><br><span class="line">            <span class="keyword">var</span> courseType = item.courseType;</span><br><span class="line"></span><br><span class="line">            ws1.addRow([number,term,course,credit,courseType]);</span><br><span class="line">        &#125;)</span><br><span class="line">		<span class="comment">//设置每列宽度</span></span><br><span class="line">        colWidth(ws1, [<span class="number">1</span>,<span class="number">4</span>], <span class="number">10</span>);</span><br><span class="line">        colWidth(ws1, [<span class="number">2</span>], <span class="number">22</span>);</span><br><span class="line">        colWidth(ws1, [<span class="number">3</span>], <span class="number">50</span>);</span><br><span class="line">        colWidth(ws1, [<span class="number">5</span>], <span class="number">18</span>);</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">colWidth</span>(<span class="params">arg_ws, arg_cols, arg_width</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(i <span class="keyword">in</span> arg_cols) &#123;</span><br><span class="line">                arg_ws.getColumn(arg_cols[i]).width = arg_width;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        workbook.xlsx.writeFile(<span class="string">'理论课程.xlsx'</span>)</span><br><span class="line">            .then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">                <span class="built_in">console</span>.log(<span class="string">'生成 xlsx'</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h6 id="成果截图："><a href="#成果截图：" class="headerlink" title="成果截图："></a>成果截图：</h6><p><img src="/2018/12/26/NodeJS爬虫之学校教务网站/C:/Users\22910\blog\source\_posts\NodeJS爬虫之学校教务网站\@8`0G" alt="@8`0G)B5OBW6RR3~RLLRKSF">B5OBW6RR3~RLLRKSF.png)</p>
+<h6 id="参考网页："><a href="#参考网页：" class="headerlink" title="参考网页："></a>参考网页：</h6><ul>
+<li>爬虫视频一例： <a href="https://www.imooc.com/video/7965" target="_blank" rel="noopener">https://www.imooc.com/video/7965</a></li>
+<li>关于Cookie: <a href="https://www.jianshu.com/p/2f849ef7c8d0" target="_blank" rel="noopener">https://www.jianshu.com/p/2f849ef7c8d0</a></li>
+<li>关于解决中文乱码： <a href="https://blog.csdn.net/u010129985/article/details/78307376?tdsourcetag=s_pcqq_aiomsg" target="_blank" rel="noopener">https://blog.csdn.net/u010129985/article/details/78307376?tdsourcetag=s_pcqq_aiomsg</a></li>
+<li>关于NodeJS导出到Excel： <a href="https://blog.csdn.net/qq_24078843/article/details/76422786" target="_blank" rel="noopener">https://blog.csdn.net/qq_24078843/article/details/76422786</a></li>
+</ul>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2018/11/29/一阙邀醉满城歌/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#遇到的问题："><span class="post-toc-number">1.</span> <span class="post-toc-text">遇到的问题：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#问题的解决："><span class="post-toc-number">2.</span> <span class="post-toc-text">问题的解决：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#最终代码如下："><span class="post-toc-number">3.</span> <span class="post-toc-text">最终代码如下：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#成果截图："><span class="post-toc-number">4.</span> <span class="post-toc-text">成果截图：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#参考网页："><span class="post-toc-number">5.</span> <span class="post-toc-text">参考网页：</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Naiaky</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="程序员">
+  <meta name="description" content="天涯望断，寻途千晚，恰揽一剪芳华">
+  
+  <title>Naiaky</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu"><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav">
+    <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Naiaky</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off">
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class="no-result">无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a class="" target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2019/10/">October 2019<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2019/03/">March 2019<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/12/">December 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">2</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="category-link" href="/categories/ancientry/">ancientry<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/computer-foundation/">computer-foundation<span class="category-count">1</span></a></li><li class="nav-dropdown-list"><a class="category-link" href="/categories/fore-end/">fore-end<span class="category-count">2</span></a>
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-9.png)">
+  <h2>c3p0的配置及遇到的一些小问题</h2>
+    
+  <p>作者:Naiaky &nbsp&nbsp 发布于:<time datetime="2019-10-13T02:13:41.000Z">
+          2019-10-13
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h6 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h6><p>　　C3P0是一个开源的JDBC连接池，它实现了数据源和JNDI绑定，支持JDBC3规范和JDBC2的标准扩展。目前使用它的开源项目有Hibernate、Spring等。</p>
+<p>　</p>
+<h6 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h6><p>1.导入c3p0的包和MySQL的驱动包</p>
+<p><img src="/2019/10/13/c3p0的配置及遇到的一些小问题/D:/Program Files\blog\source\_posts\c3p0的配置及遇到的一些小问题\img2.png" alt="img２"></p>
+<p>　　　</p>
+<p>2.写配置文件c3p0-config并放置到src目录下</p>
+<p><c3p0-config></c3p0-config></p>
+<pre><code>&lt;default-config&gt;
+   &lt;property name=&quot;user&quot;&gt;root&lt;/property&gt;
+     &lt;property name=&quot;password&quot;&gt;x5&lt;/property&gt;
+     &lt;property name=&quot;driverClass&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
+     &lt;property name=&quot;jdbcUrl&quot;&gt;jdbc:mysql:///footprint&lt;/property&gt;
+   &lt;/default-config&gt;
+</code></pre><p>  <named-config name="footprint"> </named-config></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name="acquireIncrement"&gt;5&lt;/property&gt;</span><br><span class="line">&lt;property name="initialPoolSize"&gt;10&lt;/property&gt;</span><br><span class="line">&lt;property name="minPoolSize"&gt;10&lt;/property&gt;</span><br><span class="line">&lt;property name="maxPoolSize"&gt;50&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- intergalactoApp adopts a different approach to configuring statement caching --&gt;</span><br><span class="line">&lt;property name="maxStatements"&gt;20&lt;/property&gt; </span><br><span class="line">&lt;property name="maxStatementsPerConnection"&gt;5&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>  <br></p>
+<p>　　　</p>
+<p>　　　</p>
+<p>3.使用连接池获取数据库连接</p>
+<p>private static DataSource dataSource = null;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &#123;</span><br><span class="line">	dataSource = <span class="keyword">new</span> ComboPooledDataSource(<span class="string">"footprint"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 拿连接</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 数据源的一个Connection对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> SQLException </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getConnection</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> dataSource.getConnection();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用无参的ComboPooledDataSource的方式拿到连接</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Connection <span class="title">getDataSource</span><span class="params">()</span> <span class="keyword">throws</span> PropertyVetoException, SQLException </span>&#123;</span><br><span class="line">	ComboPooledDataSource source = <span class="keyword">new</span> ComboPooledDataSource();</span><br><span class="line">	source.setDriverClass(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line">	source.setJdbcUrl(<span class="string">"jdbc:mysql:///footprint"</span>);</span><br><span class="line">	source.setUser(<span class="string">"root"</span>);</span><br><span class="line">	source.setPassword(<span class="string">"x5"</span>);</span><br><span class="line">	<span class="keyword">return</span> source.getConnection();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h6 id="遇到的一些小问题"><a href="#遇到的一些小问题" class="headerlink" title="遇到的一些小问题"></a>遇到的一些小问题</h6><p>报错1：Type mismatch: cannot convert from ComboPooledDataSource to DataSource</p>
+<p><img src="/2019/10/13/c3p0的配置及遇到的一些小问题/D:/Program Files\blog\source\_posts\c3p0的配置及遇到的一些小问题\img0.png" alt="img0"></p>
+<p>*报错原因：import org.apache.tomcat.jdbc.pool.DataSource;</p>
+<p>*解决方法： 导入正确的包，import javax.sql.DataSource;</p>
+<p>　　　</p>
+<p>　　　</p>
+<p>报错2：java.lang.NoClassDefFoundError: com/mchange/v2/ser/Indirector</p>
+<p>*报错原因：c3p0数据库连接池的辅助包，没有这个包系统启动的时候会报classnotfoundexception，这是c3p0-0.9.2版本后分离出来的包，0.9.1的时候还是一个包就搞定的</p>
+<p>*解决办法：加上mchange-commons-java-0.2.3.4.ja包</p>
+<p>　　　</p>
+<p>　　　</p>
+<p>报错3：Exception in thread “main” java.lang.NullPointerException</p>
+<p><img src="/2019/10/13/c3p0的配置及遇到的一些小问题/D:/Program Files\blog\source\_posts\c3p0的配置及遇到的一些小问题\img1.png" alt="img1"></p>
+<p>*报错原因：调用getConnection()时，还没有执行代码块的初始化</p>
+<p>*解决办法：1.用静态代码块初始化；2.在属性定义时初始化。</p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2019/03/05/Vue入门篇/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#概述"><span class="post-toc-number">1.</span> <span class="post-toc-text">概述</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#使用步骤"><span class="post-toc-number">2.</span> <span class="post-toc-text">使用步骤</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#遇到的一些小问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">遇到的一些小问题</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Naiaky</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
